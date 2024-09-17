@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+}
+
+header nav, footer nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  justify-content: space-between;
+}
+
+footer nav {
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 0.9rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.shopping-bag {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.count-div {
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  background-color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#item-count {
+  font-weight: bold;
+}
+
+#product-list {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  margin: 1.25rem;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 1.25rem;
+  width: 30%;
+  height: 130%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.product img {
+  height: 12rem;
+}
+
+button {
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a7a3a3;
+  padding: 1.25rem;
+  border: 2px solid #ccc;
+}
+
+.modal-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#bag-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+#bag-items li input {
+  outline: none;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #product-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .product {
+      width: 80%;
+      margin-bottom: 1.25rem;
+  }
+
+  .footer {
+      text-align: center;
+  }
+}
